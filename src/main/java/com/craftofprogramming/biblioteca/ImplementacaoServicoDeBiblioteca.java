@@ -5,12 +5,12 @@ import java.util.Map;
 import java.util.Optional;
 
 public class ImplementacaoServicoDeBiblioteca implements ServicoDeBiblioteca {
-    private final BookDAO dao;
+    private final LivroDAO dao;
 
     public ImplementacaoServicoDeBiblioteca(boolean carregaBibioteca) {
-        this.dao = new BookDAO();
+        this.dao = new LivroDAO();
         if (carregaBibioteca) {
-            this.dao.carregaBiblioteca(BookDAO.DEFAULT_PATH);
+            this.dao.carregaBiblioteca(LivroDAO.DEFAULT_PATH);
         }
     }
 

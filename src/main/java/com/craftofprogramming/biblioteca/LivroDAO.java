@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
  * Parses each line of a csv file containing a list of books onto a Book object and runs
  * a simple query against it.
  */
-public class BookDAO {
+public class LivroDAO {
 
-    public static Path DEFAULT_PATH = Paths.get("src/main/java/com/craftofprogramming/biblioteca/books.csv");
+    public static Path DEFAULT_PATH = Paths.get("src/main/resources/books.csv");
     private List<Livro> biblioteca = new ArrayList<>();
 
     public List<Livro> obtemListaDeLivrosComputacaoOrganizadaPorTitulo() {
@@ -68,7 +68,7 @@ public class BookDAO {
     }
 
     public static void main(String[] args) {
-        final BookDAO livroDAO = new BookDAO();
+        final LivroDAO livroDAO = new LivroDAO();
         livroDAO.carregaBiblioteca(DEFAULT_PATH);
     }
 
